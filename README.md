@@ -70,6 +70,26 @@ DB Change:
   - Re-Start: `docker compose up`
   - The volume will be recreated automatically
 
+## Usage
+
+To use the REST API, the base URL is:
+ - http://localhost:8080/
+
+The ENTRY API is located at:
+ - http://localhost:8080/entry/
+
+In order to **create** an entry:
+ - [POST] http://localhost:8080/entry
+`
+{"key": "BE", "keyType": "SIMPLE", "entity": "country","description": "Belgium"}
+`
+
+In order to **list** entries of an entity:
+ - [GET] http://localhost:8080/entry/country/
+
+In order to **get** a specific entry:
+ - [GET] http://localhost:8080/entry/country/BE
+
 ## Rest Client
 
 ### Micro Profile REST Client
