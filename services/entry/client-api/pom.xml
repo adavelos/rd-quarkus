@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.argonath.rdq.services.entry</groupId>
+        <artifactId>rd-entry</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>org.argonath.rdq.srevices.entry</groupId>
+    <artifactId>rd-entry-client-api</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <description>Reference Data Application - Entry API</description>
+
+    <dependencies>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-hibernate-validator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-resteasy-jsonb</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-rest-client</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>io.quarkus</groupId>
+            <artifactId>quarkus-rest-client-jsonb</artifactId>
+        </dependency>
+    </dependencies>
+	
+    <build>
+       <plugins>
+           <plugin>
+               <artifactId>maven-compiler-plugin</artifactId>
+               <version>${compiler-plugin.version}</version>
+               <configuration>
+                   <compilerArgs>
+                       <arg>-parameters</arg>
+                   </compilerArgs>
+               </configuration>
+           </plugin>
+       </plugins>
+    </build>
+	
+    <profiles>
+	
+	</profiles>
+</project>

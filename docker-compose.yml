@@ -1,0 +1,27 @@
+services:
+  postgres_rdapp:
+    build: ./db/postgres
+    environment:
+      - POSTGRES_PASSWORD=password
+    networks:
+      - rdapp_network
+    volumes:
+      - rdpgdata:/var/lib/postgresql/data
+    hostname: "postgres"
+  rd_quarkus_entry:
+    build:
+      context: ./services/entry/service
+      dockerfile: ./src/main/docker/Dockerfile.jvm
+    environment:
+      - POSTGRES_PASSWORD=password
+    networks:
+      - rdapp_network
+    ports:
+      - "8080:8080"
+      - "5005:5005"
+    depends_on:
+      - postgres_rdapp
+networks:
+  rdapp_network:
+volumes:
+  rdpgdata:

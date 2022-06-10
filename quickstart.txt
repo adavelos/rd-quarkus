@@ -1,0 +1,17 @@
+Quarkus: quickstart
+
+- WT:
+	T1: JDK11 
+		RD & cd RD-QUARKUS
+		idea .
+		mvn clean install -DskipTests=true
+	T2: JDK11
+		mvn -pl services/entry/service quarkus:dev
+	T3: JDK11	
+		cd services/entry/integration-test
+		jdk11_path [set JAVA path]
+		java -jar target\quarkus-app\quarkus-run.jar
+
+- Run POSTMAN: run create/get
+- Open Cookbook: PROJECT/QUARKUS
+- REST Client Article: https://hantsy.medium.com/interacting-with-rest-apis-in-quarkus-56d3b6199ac2

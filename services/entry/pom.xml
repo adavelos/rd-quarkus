@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd"
+         xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.argonath.rdq.services</groupId>
+        <artifactId>rd-services</artifactId>
+        <version>1.0.0-SNAPSHOT</version>
+    </parent>
+
+    <groupId>org.argonath.rdq.services.entry</groupId>
+    <artifactId>rd-entry</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <description>Reference Data Application - Entry</description>
+
+	<modules>
+		<module>client-api</module>
+		<module>service</module>
+        <module>integration-test</module>
+	</modules>
+    
+</project>
